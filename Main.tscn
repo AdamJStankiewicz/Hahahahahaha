@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm7qo1do8t4uo"]
+
+[ext_resource type="Texture2D" uid="uid://kdtderm2oyjo" path="res://robby.webp" id="1_iqgq5"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Robby" type="Sprite2D" parent="."]
+position = Vector2(4, 0)
+texture = ExtResource("1_iqgq5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
