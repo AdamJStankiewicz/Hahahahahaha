@@ -1,3 +1,4 @@
+[background arg="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" fade="0.0"]
 join dialogic_shared/king 3 [animation="Instant In Or Out"]
 dialogic_shared/king: Make me laugh.
 join jester 1 [animation="Slide In Left"]
