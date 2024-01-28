@@ -14,8 +14,10 @@ if MadlibAutoload.has_next_madlib() == false:
 	return
 do MadlibAutoload.jump_next_madlib()
 if {MadlibAutoload.has_next_madlib()} == true:
-	jester: (Should I tell another story?)
+	jester: (I have more material. Should I tell another story?)
 	- Offer another story
+		jester: Let me tell you another story.
+		king: I'll allow it.
 		jump Loop Start
 	- Move on to the next activity
 		jester: Let's move on.
