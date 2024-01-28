@@ -1,0 +1,76 @@
+[gd_scene load_steps=8 format=3 uid="uid://bm7qo1do8t4uo"]
+
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_qkoo0"]
+[ext_resource type="Texture2D" uid="uid://kdtderm2oyjo" path="res://robby.webp" id="2_0hosv"]
+[ext_resource type="PackedScene" uid="uid://lex537tr0tnj" path="res://Objects/egg.tscn" id="3_p62bw"]
+[ext_resource type="Script" path="res://Scripts/Platform.gd" id="4_ec6cf"]
+[ext_resource type="PackedScene" uid="uid://dqtl67f8qigqn" path="res://Objects/coin.tscn" id="5_lorlf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klrg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jj8ms"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_qkoo0")
+
+[node name="Robby" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4, 0)
+texture = ExtResource("2_0hosv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Egg" parent="." instance=ExtResource("3_p62bw")]
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(0, 119)
+scale = Vector2(26.794, -1.705)
+script = ExtResource("4_ec6cf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_klrg2")
+
+[node name="ColorRect" type="ColorRect" parent="Platform"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+
+[node name="Death" type="Area2D" parent="."]
+position = Vector2(0, 451)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death"]
+scale = Vector2(100, 10)
+shape = SubResource("RectangleShape2D_jj8ms")
+
+[node name="Coin" parent="." instance=ExtResource("5_lorlf")]
+position = Vector2(-125, 0)
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="Score" type="Label" parent="."]
+offset_left = -544.0
+offset_top = -309.0
+offset_right = -44.0
+offset_bottom = 191.0
+rotation = 6.28319
+scale = Vector2(3, 3)
+text = "Time Left:"
+
+[node name="Coins" type="Label" parent="."]
+offset_left = -1020.0
+offset_top = -309.0
+offset_right = -520.0
+offset_bottom = 191.0
+rotation = 6.28319
+scale = Vector2(2.965, 2.965)
+text = "Coins Left:"
+horizontal_alignment = 2
+
+[connection signal="body_entered" from="Death" to="Platform" method="_on_death_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Platform" method="_on_timer_timeout"]
