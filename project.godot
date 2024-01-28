@@ -17,18 +17,9 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Scripts/Global.gd"
 MadlibAutoload="*res://Minigames/madlibs/madlib_autoload.gd"
+Global="*res://Scripts/Global.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-
-[file_customization]
-
-folder_colors={
-"res://Art/": "orange",
-"res://Minigames/": "red",
-"res://Objects/": "purple",
-"res://Scripts/": "blue"
-}
 
 [dialogic]
 
@@ -93,6 +84,15 @@ history/simple_history_enabled=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Art/": "orange",
+"res://Minigames/": "red",
+"res://Objects/": "purple",
+"res://Scripts/": "blue"
+}
 
 [input]
 
