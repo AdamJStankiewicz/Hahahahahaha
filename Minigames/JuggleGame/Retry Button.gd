@@ -12,6 +12,5 @@ func _process(delta):
 
 func _on_pressed():
 	# Restart Scene
-	# TODO: store retries / game over 
-	get_tree().reload_current_scene()
+	Global.retry();
 	pass # Replace with function body.

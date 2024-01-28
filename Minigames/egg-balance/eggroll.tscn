@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://bm7qo1do8t4uo"]
+[gd_scene load_steps=7 format=3 uid="uid://bm7qo1do8t4uo"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_qkoo0"]
-[ext_resource type="Texture2D" uid="uid://kdtderm2oyjo" path="res://robby.webp" id="2_0hosv"]
 [ext_resource type="PackedScene" uid="uid://lex537tr0tnj" path="res://Objects/egg.tscn" id="3_p62bw"]
 [ext_resource type="Script" path="res://Scripts/Platform.gd" id="4_ec6cf"]
 [ext_resource type="PackedScene" uid="uid://dqtl67f8qigqn" path="res://Objects/coin.tscn" id="5_lorlf"]
@@ -12,11 +11,6 @@
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_qkoo0")
-
-[node name="Robby" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(4, 0)
-texture = ExtResource("2_0hosv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

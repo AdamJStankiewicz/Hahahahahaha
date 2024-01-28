@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HAHA"
-run/main_scene="res://Minigames/egg-balance/eggroll.tscn"
+run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -20,15 +20,7 @@ config/icon="res://icon.svg"
 Global="*res://Scripts/Global.gd"
 MadlibAutoload="*res://Minigames/madlibs/madlib_autoload.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-
-[file_customization]
-
-folder_colors={
-"res://Art/": "orange",
-"res://Minigames/": "red",
-"res://Objects/": "purple",
-"res://Scripts/": "blue"
-}
+Music="*res://music.gd"
 
 [dialogic]
 
@@ -93,6 +85,16 @@ history/simple_history_enabled=true
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Art/": "orange",
+"res://Audio/": "green",
+"res://Minigames/": "red",
+"res://Objects/": "purple",
+"res://Scripts/": "blue"
+}
 
 [input]
 
