@@ -31,33 +31,38 @@ directories/dch_directory={
 directories/dtl_directory={
 "madlib1": "res://Minigames/madlibs/madlib1.dtl",
 "madlib2": "res://Minigames/madlibs/madlib2.dtl",
-"madlib_intro1": "res://Minigames/madlibs/madlib_intro1.dtl"
+"madlib_intro1": "res://Minigames/madlibs/madlib_intro1.dtl",
+"madlib_littlepigs": "res://Minigames/madlibs/madlib_littlepigs.dtl"
 }
 variables={
 "adjective1": "",
 "adjective2": "",
-"adjective3": "",
-"adjective4": "",
-"adjective5": "",
-"adjective6": "",
-"adjective7": "",
-"adjective8": "",
+"adverb1": "",
+"bad": "",
+"big": "",
+"blow": "",
+"bodypart1": "",
+"bodypart2": "",
+"bodypart3": "",
+"building1": "",
+"building2": "",
+"building3": "",
+"eat": "",
+"huff": "",
+"hungry": "",
+"little": "",
+"material1": "",
+"material2": "",
+"material3": "",
 "noun1": "",
-"noun2": "",
-"noun3": "",
-"noun4": "",
-"noun5": "",
-"noun6": "",
-"noun7": "",
-"noun8": "",
+"pig": "",
+"proposition1": "",
+"puff": "",
 "verb1": "",
 "verb2": "",
 "verb3": "",
 "verb4": "",
-"verb5": "",
-"verb6": "",
-"verb7": "",
-"verb8": ""
+"wolf": ""
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

@@ -1,0 +1,105 @@
+# Filling in words
+jester: (Looks like an adjective goes here. A describing word...)
+[text_input text="Make something up" var="little" placeholder="adjective"]
+jester: (Looks like a noun, perhaps a kind of animal, goes here...)
+[text_input text="Make something up" var="pig" placeholder="animal"]
+jester: (Looks like an adjective goes here...)
+[text_input text="Make something up" var="big" placeholder="adjective"]
+jester: (Looks like another adjective goes here...)
+[text_input text="Make something up" var="bad" placeholder="adjective"]
+jester: (Looks like a noun, perhaps another kind of animal, goes here...)
+[text_input text="Make something up" var="wolf" placeholder="animal"]
+jester: (Looks like a verb, an action word, goes here. Preferebly one that can act upon an object...)
+[text_input text="Make something up" var="eat" placeholder="transitive verb"]
+jester: (Looks like an adjective goes here...)
+[text_input text="Make something up" var="adjective1" placeholder="adjective"]
+jester: (Looks like a type of building, goes here...)
+[text_input text="Make something up" var="building1" placeholder="noun"]
+jester: (Looks like a noun--person place or thing--goes here...)
+[text_input text="Make something up" var="material1" placeholder="noun"]
+jester: (Looks like a verb, an action word, goes here...)
+[text_input text="Make something up" var="huff" placeholder="verb"]
+jester: (Looks like another verb goes here... Oh! It would be funny if it rhymed with "{huff}"!)
+[text_input text="Make something up" var="puff" placeholder="verb"]
+jester: (Looks like yet another verb goes here...)
+[text_input text="Make something up" var="blow" placeholder="verb"]
+jester: (Looks like a noun, goes here... Maybe a body part?)
+[text_input text="Make something up" var="bodypart1" placeholder="noun"]
+king: I'm starting to get bored!
+jester: Be patient. I'm halfway done. Hang on!
+king: Halfway!? I didn't ask for a novel!
+jester: (Looks like an adjective, goes here...')
+[text_input text="Make something up" var="hungry" placeholder="adjective"]
+jester: (Looks like another type of building, goes here...)
+[text_input text="Make something up" var="building2" placeholder="noun"]
+jester: (Looks like a noun, goes here...)
+[text_input text="Make something up" var="material2" placeholder="noun"]
+jester: (Looks like a noun, goes here... Maybe another body part?)
+[text_input text="Make something up" var="bodypart2" placeholder="noun"]
+jester: (Looks like yet another type of building, goes here...)
+[text_input text="Make something up" var="building3" placeholder="noun"]
+jester: (Looks like a noun, goes here...)
+[text_input text="Make something up" var="material3" placeholder="noun"]
+jester: (Looks like a noun, goes here... Maybe a body part?)
+[text_input text="Make something up" var="bodypart3" placeholder="noun"]
+jester: (Looks like an adjective goes here...)
+[text_input text="Make something up" var="adjective2" placeholder="adjective"]
+jester: (Looks like a verb goes here...)
+[text_input text="Make something up" var="verb1" placeholder="verb"]
+jester: (Looks like a preposition goes here... That's a positional word like "above", "below", or "between".)
+[text_input text="Make something up" var="proposition1" placeholder="preposition"]
+king: What is taking so long?
+king: Is that a thesaurus!?
+jester: Just a little longer... (Only five more to go!)
+jester: (Looks like a noun, goes here...)
+[text_input text="Make something up" var="noun1" placeholder="noun"]
+jester: (Looks like a verb goes here...)
+[text_input text="Make something up" var="verb2" placeholder="verb"]
+jester: (Looks like a verb goes here...)
+[text_input text="Make something up" var="verb3" placeholder="verb"]
+jester: (Looks like a verb goes here...)
+[text_input text="Make something up" var="verb4" placeholder="verb"]
+jester: (Looks like an adverb goes here...)
+[text_input text="Make something up" var="adverb1" placeholder="verb"]
+jester: (OK, that's everything!)
+jester: AHEM!
+
+# Story start
+jester: Once upon a time there were three {little} {pig}s.
+jester: One day, a {big} {bad} {wolf} came along and wanted to {eat} the {pig}s.
+# First pig
+jester: He approached the home of the first {little} {pig}.
+jester: This {little} {pig}, who was kind of {adjective1}, lived in a {building1} made of {material1}.
+jester: The {big} {bad} {wolf} said, "{little} {pig} {little} {pig}, let me in!"
+jester: "Or I'll {huff} and I'll {puff} and I'll {blow} your {building1} in!"
+jester: The {little} {pig} replied "Not by the hair of my {bodypart1}y {bodypart1} {bodypart1}."
+jester: The {big} {bad} {wolf} {huff}ed...
+jester: and he {puff}ed...
+jester: and he {blow}ed the {building1} in!
+jester: Then he {eat}ed the {little} {pig}.
+jester: But he was still {hungry}, so he approached another {little} {pig}'s home.
+# Second pig
+jester: This {little} {pig}, a little bit more {adjective1}, lived in a {building2} made of {material2}.
+jester: The {big} {bad} {wolf} said, "{little} {pig} {little} {pig}, let me in!"
+jester: "Or I'll {huff} and I'll {puff} and I'll {blow} your {building2} in!"
+jester: The {little} {pig} replied, "Not by the hair of my {bodypart2}y {bodypart2} {bodypart2}!"
+jester: So, the {big} {bad} {wolf} {huff}ed...
+jester: and he {puff}ed...
+jester: and he {blow}ed the {building2} in!
+jester: Then he {eat}ed the {little} {pig}.
+# Third pig
+jester: Not quite satisfied, the {big} {bad} {wolf} continued to the third {little} {pig}'s home.
+jester: This {little} {pig}, the most {adjective1} of all, lived in a {building3} made of {material3}.
+jester: The {big} {bad} {wolf} said, "{little} {pig} {little} {pig}, let me in!"
+jester: "Or I'll {huff} and I'll {puff} and I'll {blow} your {building3} in!"
+jester: The {little} {pig} replied, "Not by the hair of my {bodypart3}y {bodypart3} {bodypart3}!"
+jester: So, the {big} {bad} {wolf} {huff}ed...
+jester: and he {puff}ed...
+jester: and he tried to {blow} the {building3} in!
+jester: ... But it was too {adjective2}.
+jester: The {big} {bad} {wolf} couldn't get inside, so he thought of a plan.
+jester: He would {verb1} his way in {proposition1} the {noun1}.
+jester: Unfortunately for the {wolf}, the {little} {pig}s were prepared for this and {verb2}ed the {noun1}, so he couldn't {verb1} in.
+jester: Instead, the {wolf} {verb3}ed, and the {little} {pig}s {verb4}ed {adverb1} ever after. The end.
+king: What a fascinating story! I can't believe the {wolf} would go though so much trouble just to {eat} three {pig}s. I can hardly believe it!
+return

@@ -1,6 +1,7 @@
 extends Node
 
 var available_madlibs = [
+	"madlib_littlepigs",
 	"madlib1",
 	"madlib2",
 ]
