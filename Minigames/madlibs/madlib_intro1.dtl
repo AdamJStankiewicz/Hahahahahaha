@@ -1,0 +1,24 @@
+join dialogic_shared/king 3 [animation="Instant In Or Out"]
+dialogic_shared/king: Make me laugh.
+join jester 1 [animation="Slide In Left"]
+jester: I wrote you a story!
+dialogic_shared/king: Let's hear it.
+jester: (Oh no, it looks like I smeared some ink!)
+label Loop Start
+jester: Just one moment...
+if MadlibAutoload.has_next_madlib() == false:
+	jester: Actually, I'm all out of stories...
+	king: ...
+	jester: Let's move on.
+	return
+do MadlibAutoload.jump_next_madlib()
+if {MadlibAutoload.has_next_madlib()} == true:
+	jester: (Should I tell another story?)
+	- Offer another story
+		jump Loop Start
+	- Move on to the next activity
+		jester: Let's move on.
+else:
+	jester: (I'm all out of stories.)
+	jester: Let's move on.
+return

@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://Scripts/Global.gd"
+MadlibAutoload="*res://Minigames/madlibs/madlib_autoload.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [file_customization]
@@ -28,6 +29,66 @@ folder_colors={
 "res://Objects/": "purple",
 "res://Scripts/": "blue"
 }
+
+[dialogic]
+
+directories/dch_directory={
+"dialogic_shared/king": "res://dialogic_shared/king.dch",
+"jester": "res://dialogic_shared/jester.dch",
+"king": "res://dialogic_shared/king.dch"
+}
+directories/dtl_directory={
+"madlib1": "res://Minigames/madlibs/madlib1.dtl",
+"madlib2": "res://Minigames/madlibs/madlib2.dtl",
+"madlib_intro1": "res://Minigames/madlibs/madlib_intro1.dtl"
+}
+variables={
+"adjective1": "",
+"adjective2": "",
+"adjective3": "",
+"adjective4": "",
+"adjective5": "",
+"adjective6": "",
+"adjective7": "",
+"adjective8": "",
+"noun1": "",
+"noun2": "",
+"noun3": "",
+"noun4": "",
+"noun5": "",
+"noun6": "",
+"noun7": "",
+"noun8": "",
+"verb1": "",
+"verb2": "",
+"verb3": "",
+"verb4": "",
+"verb5": "",
+"verb6": "",
+"verb7": "",
+"verb8": ""
+}
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+layout/style_list=["res://dialogic_shared/dialogic_style.tres"]
+layout/default_style="res://dialogic_style.tres"
+glossary/default_case_sensitive=true
+layout/end_behaviour=1
+history/simple_history_enabled=true
 
 [editor_plugins]
 

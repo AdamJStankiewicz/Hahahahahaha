@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctmmdbax3h11h"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Editor/dialogic_editor.gd" id="1_4s7f1"]
+[ext_resource type="Script" path="res://Minigames/madlibs/madlib_controller.gd" id="1_lki46"]
+
+[node name="MadlibMinigame" type="Node2D"]
+script = ExtResource("1_lki46")
+
+[node name="DialogicEditor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4s7f1")
