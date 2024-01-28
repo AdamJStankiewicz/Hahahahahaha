@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://0lne2mprfiqr"]
+
+[ext_resource type="Script" path="res://Minigames/JuggleGame/JuggleController.gd" id="1_40nu6"]
+[ext_resource type="Script" path="res://Minigames/JuggleGame/Egg.gd" id="2_4kh5o"]
+[ext_resource type="Texture2D" uid="uid://71bsnobj27e" path="res://Minigames/JuggleGame/media/Egg.png" id="2_7bw7t"]
+[ext_resource type="Texture2D" uid="uid://d3ecmahs7lyvi" path="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" id="4_2f6hw"]
+[ext_resource type="Script" path="res://Minigames/JuggleGame/Retry Button.gd" id="5_5mthd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0y1vn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k4w8a"]
+
+[node name="JuggleTest" type="Node2D"]
+position = Vector2(0, -5)
+script = ExtResource("1_40nu6")
+eggNodePaths = [NodePath("Egg1 RigidBody2D"), NodePath("Egg2 RigidBody2D2"), NodePath("Egg3 RigidBody2D2")]
+jugglableHeight = 50
+breakingHeight = 200
+JUGGLE_LOCKOUT_TIMER = 0.25
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Egg1 RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(-259, -417)
+physics_material_override = SubResource("PhysicsMaterial_0y1vn")
+gravity_scale = 0.0
+script = ExtResource("2_4kh5o")
+gravity = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Egg1 RigidBody2D"]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("2_7bw7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Egg1 RigidBody2D"]
+position = Vector2(0, -2)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_k4w8a")
+disabled = true
+
+[node name="Egg2 RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(-259, -425)
+physics_material_override = SubResource("PhysicsMaterial_0y1vn")
+gravity_scale = 0.0
+script = ExtResource("2_4kh5o")
+gravity = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Egg2 RigidBody2D2"]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("2_7bw7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Egg2 RigidBody2D2"]
+position = Vector2(0, -2)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_k4w8a")
+disabled = true
+
+[node name="Egg3 RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(-262, -425)
+physics_material_override = SubResource("PhysicsMaterial_0y1vn")
+gravity_scale = 0.0
+script = ExtResource("2_4kh5o")
+gravity = 1.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Egg3 RigidBody2D2"]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = ExtResource("2_7bw7t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Egg3 RigidBody2D2"]
+position = Vector2(0, -2)
+scale = Vector2(7, 7)
+shape = SubResource("CircleShape2D_k4w8a")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(-7.99999, -75)
+rotation = 0.00225509
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("4_2f6hw")
+
+[node name="Retry Button" type="Button" parent="."]
+visible = false
+offset_left = -106.0
+offset_top = 97.0
+offset_right = -33.0
+offset_bottom = 128.0
+scale = Vector2(3, 3)
+text = "[ Retry ] "
+script = ExtResource("5_5mthd")
+
+[connection signal="pressed" from="Retry Button" to="Retry Button" method="_on_pressed"]
