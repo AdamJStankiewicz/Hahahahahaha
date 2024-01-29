@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://0lne2mprfiqr"]
+[gd_scene load_steps=11 format=3 uid="uid://0lne2mprfiqr"]
 
 [ext_resource type="Script" path="res://Minigames/JuggleGame/JuggleController.gd" id="1_40nu6"]
 [ext_resource type="Script" path="res://Minigames/JuggleGame/Egg.gd" id="2_4kh5o"]
 [ext_resource type="Texture2D" uid="uid://71bsnobj27e" path="res://Minigames/JuggleGame/media/Egg.png" id="2_7bw7t"]
 [ext_resource type="Texture2D" uid="uid://d3ecmahs7lyvi" path="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" id="4_2f6hw"]
 [ext_resource type="Script" path="res://Minigames/JuggleGame/Retry Button.gd" id="5_5mthd"]
+[ext_resource type="Script" path="res://Minigames/JuggleGame/Game Over Button.gd" id="6_faea3"]
+[ext_resource type="AudioStream" uid="uid://cu2f2eijyl3ud" path="res://Audio/throw.mp3" id="7_iyih4"]
+[ext_resource type="AudioStream" uid="uid://db5ovxr2klur1" path="res://Audio/eg.mp3" id="8_owct2"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0y1vn"]
 
@@ -14,9 +17,10 @@
 position = Vector2(0, -5)
 script = ExtResource("1_40nu6")
 eggNodePaths = [NodePath("Egg1 RigidBody2D"), NodePath("Egg2 RigidBody2D2"), NodePath("Egg3 RigidBody2D2")]
-jugglableHeight = 50
+jugglableHeight = -50
 breakingHeight = 200
-JUGGLE_LOCKOUT_TIMER = 0.25
+JUGGLE_LOCKOUT_TIMER = 0.1
+releaseDelay = 2.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -91,4 +95,23 @@ scale = Vector2(3, 3)
 text = "[ Retry ] "
 script = ExtResource("5_5mthd")
 
+[node name="Game Over Button" type="Button" parent="."]
+visible = false
+offset_left = -174.0
+offset_top = 98.0
+offset_right = -56.0
+offset_bottom = 129.0
+scale = Vector2(3, 3)
+text = "[ Game Over ] "
+script = ExtResource("6_faea3")
+
+[node name="ThrowSoundAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_iyih4")
+volume_db = 18.0
+
+[node name="CrackSoundAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_owct2")
+volume_db = 24.0
+
 [connection signal="pressed" from="Retry Button" to="Retry Button" method="_on_pressed"]
+[connection signal="pressed" from="Game Over Button" to="Game Over Button" method="_on_pressed"]

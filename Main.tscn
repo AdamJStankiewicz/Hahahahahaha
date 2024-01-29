@@ -1,11 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://bm7qo1do8t4uo"]
+[gd_scene load_steps=3 format=3 uid="uid://bm7qo1do8t4uo"]
 
-[ext_resource type="Texture2D" uid="uid://kdtderm2oyjo" path="res://robby.webp" id="1_iqgq5"]
+[ext_resource type="Texture2D" uid="uid://bto60u5b755i7" path="res://Art/Hahaha - BG.png" id="1_v2ngs"]
+[ext_resource type="Script" path="res://BeginButton.gd" id="2_jk844"]
 
 [node name="Main" type="Node2D"]
 
-[node name="Robby" type="Sprite2D" parent="."]
-position = Vector2(4, 0)
-texture = ExtResource("1_iqgq5")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_v2ngs")
+
+[node name="BeginButton" type="Button" parent="."]
+offset_left = -84.0
+offset_top = 159.0
+offset_right = 87.0
+offset_bottom = 221.0
+text = "Begin"
+script = ExtResource("2_jk844")

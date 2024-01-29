@@ -9,22 +9,27 @@ var eggs: Array = []; # Active juggling eggs
 var holdEggs: Array = []; # For releasing eggs at the start one at a time
 @export var releaseDelay: float = 1.5;
 var releaseTimer: float = 0.5; 
+var throwSound: AudioStreamPlayer;
+var crackSound: AudioStreamPlayer;
 
 var lowestEgg: Node = null; # Lowest active egg that can be juggled
 
 var retryButton: Node;
+var gameOverButton: Node;
 var failed: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	retryButton = $"Retry Button";
+	gameOverButton = $"Game Over Button";
+	throwSound = $"ThrowSoundAudioStreamPlayer";
+	crackSound = $"CrackSoundAudioStreamPlayer";
 	juggleLockout = 0;
 	for eggNodePath in eggNodePaths:
 		var egg: Node;
 		egg = get_node(eggNodePath);
 		print(egg);
 		holdEggs.append(egg);
-	print("Eggs: " + str(len(eggs)));
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,25 +43,38 @@ func _process(delta):
 				egg.drop();
 				releaseTimer = releaseDelay;
 	if juggleLockout > 0:
-		juggleLockout -= delta
+		juggleLockout -= delta; 
 		if juggleLockout < 0:
 			juggleLockout = 0;
 			
 	# Break eggs / fail the game if any eggs below height
 	# Update the lowest active egg for juggling, move an icon to it
 	var removeEggs: Array = [];
+	if lowestEgg != null:
+		lowestEgg.modulate = Color(1,1,1,1);
 	lowestEgg = null;
 	var lowestEggHeight: float = -9999;
 	for i in len(eggs):
 		var egg = eggs[i];
 		if egg.position.y >= breakingHeight:
 			egg.crack();
-			retryButton.show();
+			crackSound.play(0);
+			if Global.retries > 1:
+				retryButton.show();
+			else:
+				print("Game Over show")
+				gameOverButton.show();
 			failed = true;
 			
 			removeEggs.append(i);
 		elif egg.position.y >= jugglableHeight and egg.position.y > lowestEggHeight:
+			lowestEggHeight = egg.position.y
 			lowestEgg = egg;
+	if lowestEgg != null:
+		if juggleLockout == 0:
+			lowestEgg.modulate = Color(.5, .5, 1, 1)
+		else:
+			lowestEgg.modulate = Color(1, .5, .5, 1);
 	for n in removeEggs:
 		eggs.remove_at(n);
 	
@@ -70,4 +88,5 @@ func _input(event):
 				if lowestEgg.position.x < 0:
 					xspeed = 150;
 				lowestEgg.set_linear_velocity( Vector2(xspeed, -600));
+				throwSound.play(0);
 
