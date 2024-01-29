@@ -19,8 +19,8 @@ config/icon="res://icon.svg"
 
 MadlibAutoload="*res://Minigames/madlibs/madlib_autoload.gd"
 Global="*res://Scripts/Global.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Music="*res://music.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 

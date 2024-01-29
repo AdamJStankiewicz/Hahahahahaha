@@ -16,6 +16,8 @@ func crack():
 		cracked = true;
 		gravity_scale = 0;
 		set_linear_velocity( Vector2(0,0));
+		var crackedTexture = load("res://Art/Egg_cracked_new.png")
+		$"Sprite2D".set_texture(crackedTexture);
 		
 func drop():
 	gravity_scale = .4

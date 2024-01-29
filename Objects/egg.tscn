@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://lex537tr0tnj"]
 
-[ext_resource type="Texture2D" uid="uid://bsicehrnxctrf" path="res://Art/Egg.png" id="1_vgrhb"]
+[ext_resource type="Texture2D" uid="uid://bgrxnj14xsv4m" path="res://Art/Egg_new.png" id="1_240mu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gnt1x"]
 friction = 0.5
@@ -13,8 +13,8 @@ physics_material_override = SubResource("PhysicsMaterial_gnt1x")
 [node name="Egg" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(3.05176e-05, -1.90735e-06)
-scale = Vector2(10, 10)
-texture = ExtResource("1_vgrhb")
+scale = Vector2(7, 7)
+texture = ExtResource("1_240mu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(7.055, 6.926)

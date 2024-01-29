@@ -11,9 +11,13 @@ func random_game():
 	victories += 1;
 	
 	var nextScene;
-	if victories == 3:
-		var minigameScenes = ["res://Minigames/JuggleGame/JuggleTest.tscn"];
-		nextScene = minigameScenes[0];
+	if victories != 3:
+		var minigameScenes = [
+			"res://Minigames/JuggleGame/JuggleTest.tscn",
+			"res://Minigames/egg-balance/eggroll.tscn",
+			"res://Minigames/madlibs/madlib_minigame.tscn"
+		];
+		nextScene = minigameScenes[victories];
 	else:
 		nextScene =  "res://Victory.tscn"
 		
@@ -25,7 +29,10 @@ func game_over():
 	
 func retry():
 	retries -= 1
-	get_tree().reload_current_scene()
+	if retries == 0:
+		game_over();
+	else:
+		get_tree().reload_current_scene();
 	
 func begin():
 	victories = -1;

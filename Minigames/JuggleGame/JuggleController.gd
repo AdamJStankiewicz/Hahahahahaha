@@ -81,12 +81,11 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("ui_accept") and !failed:
 		if juggleLockout == 0:
-			juggleLockout = JUGGLE_LOCKOUT_TIMER
-			
 			if lowestEgg != null:
 				var xspeed = -150;
 				if lowestEgg.position.x < 0:
 					xspeed = 150;
 				lowestEgg.set_linear_velocity( Vector2(xspeed, -600));
 				throwSound.play(0);
+		juggleLockout += JUGGLE_LOCKOUT_TIMER;
 
