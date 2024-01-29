@@ -1,9 +1,9 @@
 [background arg="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" fade="0.0"]
-#join dialogic_shared/king 3 [animation="Instant In Or Out"]
-dialogic_shared/king: Make me laugh.
+#join king 3 [animation="Instant In Or Out"]
+king: Make me laugh.
 #join jester 1 [animation="Slide In Left"]
 jester: I wrote you a story!
-dialogic_shared/king: Let's hear it.
+king: Let's hear it.
 jester: (Oh no, it looks like I smeared some ink!)
 label Loop Start
 jester: Just one moment...

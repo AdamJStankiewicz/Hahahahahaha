@@ -3,5 +3,5 @@ jester: (Looks like a noun goes here...)
 jester: (Looks like a verb goes here...)
 [text_input text="Make something up" var="verb1" placeholder="verb"]
 jester: Behold, the {noun1} {verb1}.
-dialogic_shared/king: What a funny story.
+king: What a funny story.
 return

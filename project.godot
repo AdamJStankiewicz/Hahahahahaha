@@ -25,7 +25,6 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"dialogic_shared/king": "res://dialogic_shared/king.dch",
 "jester": "res://dialogic_shared/jester.dch",
 "king": "res://dialogic_shared/king.dch"
 }
