@@ -19,8 +19,13 @@ func spawn_coin():
 	add_child(coin)
 	amntLeft -= 1
 	if amntLeft <= 0:
-		print("YOU WON!")
+		win()
 
 
 func _on_timer_timeout():
 	print("YOU LOSE!!! YOU GET NOTHING. NOTHING!!!")
+	Global.retry()
+
+func win():
+	print("YOU WON!")
+	Global.random_game()
