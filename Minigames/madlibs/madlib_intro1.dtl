@@ -1,7 +1,7 @@
 [background arg="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" fade="0.0"]
-join dialogic_shared/king 3 [animation="Instant In Or Out"]
+#join dialogic_shared/king 3 [animation="Instant In Or Out"]
 dialogic_shared/king: Make me laugh.
-join jester 1 [animation="Slide In Left"]
+#join jester 1 [animation="Slide In Left"]
 jester: I wrote you a story!
 dialogic_shared/king: Let's hear it.
 jester: (Oh no, it looks like I smeared some ink!)
@@ -9,7 +9,7 @@ label Loop Start
 jester: Just one moment...
 if MadlibAutoload.has_next_madlib() == false:
 	jester: Actually, I'm all out of stories...
-	dialogic_shared/king: ...
+	king: ...
 	jester: Let's move on.
 	return
 do MadlibAutoload.jump_next_madlib()
@@ -17,7 +17,7 @@ if {MadlibAutoload.has_next_madlib()} == true:
 	jester: (I have more material. Should I tell another story?)
 	- Offer another story
 		jester: Let me tell you another story.
-		dialogic_shared/king: I'll allow it.
+		king: I'll allow it.
 		jump Loop Start
 	- Move on to the next activity
 		jester: Let's move on.
