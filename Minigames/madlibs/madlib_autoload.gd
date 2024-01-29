@@ -2,8 +2,8 @@ extends Node
 
 var available_madlibs = [
 	"madlib_littlepigs",
-	"madlib1",
-	"madlib2",
+	#"madlib1",
+	#"madlib2",
 ]
 
 @onready var remaining_madlibs = available_madlibs.duplicate()
