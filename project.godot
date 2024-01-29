@@ -95,10 +95,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 folder_colors={
 "res://Art/": "orange",
-<<<<<<< HEAD
-=======
 "res://Audio/": "green",
->>>>>>> core-game-loop
 "res://Minigames/": "red",
 "res://Objects/": "purple",
 "res://Scripts/": "blue"
