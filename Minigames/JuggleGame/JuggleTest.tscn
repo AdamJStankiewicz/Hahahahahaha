@@ -111,5 +111,12 @@ stream = ExtResource("7_iyih4")
 [node name="CrackSoundAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_owct2")
 
+[node name="Label" type="Label" parent="."]
+offset_left = -568.0
+offset_top = -313.0
+offset_right = -406.0
+offset_bottom = -258.0
+text = "Time Left: "
+
 [connection signal="pressed" from="Retry Button" to="Retry Button" method="_on_pressed"]
 [connection signal="pressed" from="Game Over Button" to="Game Over Button" method="_on_pressed"]

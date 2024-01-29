@@ -11,4 +11,4 @@ func _process(delta):
 	pass
 
 func _pressed():
-	Global.random_game();
+	Global.begin();

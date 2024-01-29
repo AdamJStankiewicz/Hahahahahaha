@@ -15,6 +15,9 @@ func _physics_process(delta):
 		rotation_degrees += rotSpeed * delta
 	
 func game_over():
+	var rootTree = get_tree();
+	if rootTree == null:
+		return;
 	get_tree().reload_current_scene()
 	egg.queue_free()
 	var instance = EGG.instantiate()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bm7qo1do8t4uo"]
+[gd_scene load_steps=8 format=3 uid="uid://bm7qo1do8t4uo"]
 
 [ext_resource type="Script" path="res://Scripts/Main.gd" id="1_qkoo0"]
 [ext_resource type="PackedScene" uid="uid://lex537tr0tnj" path="res://Objects/egg.tscn" id="3_p62bw"]
 [ext_resource type="Script" path="res://Scripts/Platform.gd" id="4_ec6cf"]
+[ext_resource type="Texture2D" uid="uid://d3ecmahs7lyvi" path="res://Minigames/JuggleGame/media/ThroneBG-cropped-lol.jpg" id="5_haa7d"]
 [ext_resource type="PackedScene" uid="uid://dqtl67f8qigqn" path="res://Objects/coin.tscn" id="5_lorlf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klrg2"]
@@ -64,6 +65,11 @@ rotation = 6.28319
 scale = Vector2(2.965, 2.965)
 text = "Coins Left:"
 horizontal_alignment = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -16
+scale = Vector2(1.45, 1.45)
+texture = ExtResource("5_haa7d")
 
 [connection signal="body_entered" from="Death" to="Platform" method="_on_death_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

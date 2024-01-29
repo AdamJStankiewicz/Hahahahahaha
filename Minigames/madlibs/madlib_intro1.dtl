@@ -9,7 +9,7 @@ label Loop Start
 jester: Just one moment...
 if MadlibAutoload.has_next_madlib() == false:
 	jester: Actually, I'm all out of stories...
-	king: ...
+	dialogic_shared/king: ...
 	jester: Let's move on.
 	return
 do MadlibAutoload.jump_next_madlib()
@@ -17,11 +17,12 @@ if {MadlibAutoload.has_next_madlib()} == true:
 	jester: (I have more material. Should I tell another story?)
 	- Offer another story
 		jester: Let me tell you another story.
-		king: I'll allow it.
+		dialogic_shared/king: I'll allow it.
 		jump Loop Start
 	- Move on to the next activity
 		jester: Let's move on.
 else:
 	jester: (I'm all out of stories.)
 	jester: Let's move on.
+do Global.random_game()
 return

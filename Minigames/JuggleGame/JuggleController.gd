@@ -11,7 +11,8 @@ var holdEggs: Array = []; # For releasing eggs at the start one at a time
 var releaseTimer: float = 0.5; 
 var throwSound: AudioStreamPlayer;
 var crackSound: AudioStreamPlayer;
-
+var victoryTimer = 10;
+var victoryTimerLabel: Label;
 var lowestEgg: Node = null; # Lowest active egg that can be juggled
 
 var retryButton: Node;
@@ -20,6 +21,8 @@ var failed: bool = false;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	victoryTimer = 10;
+	victoryTimerLabel = $Label;
 	retryButton = $"Retry Button";
 	gameOverButton = $"Game Over Button";
 	throwSound = $"ThrowSoundAudioStreamPlayer";
@@ -33,6 +36,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	victoryTimer -= delta;
+	victoryTimerLabel.text = "Time left: " + str(int(victoryTimer));
+	if victoryTimer < 0:
+		Global.random_game();
+		return;
 	if releaseTimer > 0:
 		releaseTimer -= delta
 		if releaseTimer < 0:

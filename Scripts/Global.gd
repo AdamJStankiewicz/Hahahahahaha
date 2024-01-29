@@ -2,7 +2,7 @@ extends Node
 
 var score = 3;
 var retries = 3;
-var victories = 0;
+var victories = -1;
 
 func _ready():
 	pass
@@ -37,3 +37,4 @@ func retry():
 func begin():
 	victories = -1;
 	retries = 3;
+	random_game();

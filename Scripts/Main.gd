@@ -9,8 +9,8 @@ const COIN = preload("res://Objects/coin.tscn")
 var RNG = RandomNumberGenerator.new()
 
 func _physics_process(delta):
-	score.text = str("Time Left: ",str(int(timer.time_left)))
-	coins.text = str("Coins Left: ",str(int(amntLeft)))
+	score.text = str("Time Left: ",str(int(timer.time_left)));
+	coins.text = str("Coins Left: ",str(int(amntLeft)));
 
 func spawn_coin():
 	RNG.randomize()
