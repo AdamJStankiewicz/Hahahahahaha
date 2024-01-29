@@ -87,6 +87,10 @@ glossary/default_case_sensitive=true
 layout/end_behaviour=1
 history/simple_history_enabled=true
 
+[display]
+
+window/stretch/mode="viewport"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
